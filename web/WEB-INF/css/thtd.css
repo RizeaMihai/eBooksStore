@@ -1,0 +1,65 @@
+/*
+Th Td css file
+*/
+/* 
+    Created on : Mar 17, 2018, 11:25:11 PM
+    Author     : Mihai Rizea
+*/
+
+.th1{
+    background-color: darkcyan;
+    color: white;
+    border-color: darkcyan;
+}
+.th5{
+    background-color:silver;
+    color: black;
+    border-color: darkcyan;
+    border-width:medium;
+    border-bottom: none;
+}
+.th2{
+    background-color: orange;
+    color: white;
+    border-color: orange;
+}
+.th3{
+    background-color: darkred;
+    color: white;
+    border-color: darkred;
+}
+.th6{
+    background-color:silver;
+    color: black;
+    border-color: orange;
+    border-width:medium;
+    border-bottom: none;
+}
+.th7{
+    background-color: silver;
+    color: black;
+    border-color: darkred;
+    border-width:medium;
+    border-bottom: none;
+}
+.th4{
+    color: white;
+    border: none;
+    border-bottom: none;
+    border-top: none;
+}
+.td{
+    border-top: dashed;
+    border-bottom: darkcyan;
+    border-bottom-width: medium;
+}
+.td1{
+    border-top: dashed;
+    border-bottom: orange;
+    border-bottom-width: medium;
+}
+.td2{
+    border-top: dashed;
+    border-bottom: darkred;
+    border-bottom-width: medium;
+}

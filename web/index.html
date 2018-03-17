@@ -4,17 +4,32 @@ First html file
 -->
 <html>
     <head>
-        <title>Magazinul de carti virtuale</title>
+        <title lang="de-au">Magazinul de carti virtuale</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="WEB-INF/css/css.css" type="text/css"/>
+        <link rel="stylesheet" href="WEB-INF/css/butons.css" type="text/css">
+        <link rel="stylesheet" href="WEB-INF/css/thtd.css" type="text/css"/>
 
+
+        <style>
+            table, th, td {
+            border-collapse: collapse;
+            border-spacing: 0;
+            border: 1px solid silver;
+            }
+            th, td {
+            padding: 5px;
+            text-align: center;
+            }
+        </style>
 
     </head>
-    <body class="thc">
+    <body class="thc" lang="en-us">
         This is my first HTML content!!!!
+        <br>
         Lista mea neordonata:
-        <ul>
+        <ul lang="de-sz">
             <li>
                 <b><em>Primul element din lista neordonata</em></b>
             </li>
@@ -27,7 +42,7 @@ First html file
         </ul>
         <HR>
         Lista mea ordonata:
-        <ol>
+        <ol lang="en-gb">
             <li>
                 Antena
             </li>
@@ -39,7 +54,7 @@ First html file
             </li>
         </ol>
         Lista mea de definitii:
-        <dl>
+        <dl lang="de-de">
             <dt>
                 Somnul
             </dt>
@@ -47,5 +62,104 @@ First html file
                 Starea lui Iustinica
             </dd>
         </dl>
+        
+    <table style="width:50%">
+        <tr>
+            <th class="th1">$15/mo</th>
+            <th class="th4"></th>
+            <th class="th2">$29/mo</th> 
+            <th class="th4"></th>
+            <th class="th3">$69/mo</th>
+        </tr>
+        <tr>
+            <td class="th1">Tiny</td>
+          <td class="th4"></td>
+          <td class="th2">Small</td> 
+          <td class="th4"></td> 
+          <td class="th3">Medium</td>
+        </tr>
+        <tr>
+            <td class="th5">
+                <ul>
+                  <li>
+                      <b>Unlimited</b> email adress
+                  </li>
+                  <li>
+                      <b>50GB</b> Disk space
+                  </li>
+                  <li>
+                      <b>Unlimited</b> MySQL Databases
+                  </li>
+                  <li>
+                      <b>Unlimited</b> Domains
+                  </li>
+                  <li>
+                      <b>Free</b> Billing System
+                  </li>
+                </ul>
+            </td>
+            <td class="th4"></td>
+            <td class="th6">
+                <ul>
+                  <li>
+                      <b>Unlimited</b> email adress
+                  </li>
+                  <li>
+                      <b>80GB</b> Disk space
+                  </li>
+                  <li>
+                      <b>Unlimited</b> MySQL Databases
+                  </li>
+                  <li>
+                      <b>Unlimited</b> Domains
+                  </li>
+                  <li>
+                      <b>Free</b> Billing System
+                  </li>
+                </ul>
+            </td>
+            <td class="th4"></td>
+            <td class="th7">
+            <ul>
+              <li>
+                  <b>Unlimited</b> email adress
+              </li>
+              <li>
+                  <b>120GB</b> Disk space
+              </li>
+              <li>
+                  <b>Unlimited</b> MySQL Databases
+              </li>
+              <li>
+                  <b>Unlimited</b> Domains
+              </li>
+              <li>
+                  <b>Free</b> Billing System
+              </li>
+            </ul>
+            </td> 
+        </tr>
+        <tr>
+            <td class="th5">
+                <button class="btn SIGNUP">SIGN UP</button>
+            </td>
+            <td class="th4"></td>
+            <td class="th6">
+                <button class="btn SIGNUP2">SIGN UP</button>
+            </td>
+            <td class="th4"></td>
+            <td class="th7">
+                <button class="btn SIGNUP3">SIGN UP</button>
+            </td>
+        
+        </tr>
+        <tr>
+            <td class="th1"></td>
+            <td class="th4"></td>
+            <td class="th2"></td>
+            <td class="th4"></td>
+            <td class="th3"></td>
+        </tr>
+    </table>
     </body>
 </html>

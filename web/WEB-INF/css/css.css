@@ -6,8 +6,8 @@ Style sheet file for ebooks store
     Author     : Mihai Rizea
 */
 .thc{
-    color: darkorange;
+    color: brown;
     vertical-align: top;
-    font-weight: bold;
-    background-color: lawngreen;
+    font-weight: normal;
+    background-color: silver;
 }

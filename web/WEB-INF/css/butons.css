@@ -1,0 +1,20 @@
+/*
+Butons css
+*/
+/* 
+    Created on : Mar 17, 2018, 11:03:28 PM
+    Author     : Mihai Rizea
+*/
+
+.btn {
+    border: none; /* Remove borders */
+    color: white; /* Add a text color */
+    padding: 14px 28px; /* Add some padding */
+    cursor: pointer; /* Add a pointer cursor on mouse-over */
+    }
+
+.SIGNUP {background-color: darkcyan;}
+
+.SIGNUP2 {background-color: orange;}
+
+.SIGNUP3 {background-color: darkred;}
