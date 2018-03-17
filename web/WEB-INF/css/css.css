@@ -1,0 +1,13 @@
+/*
+Style sheet file for ebooks store
+*/
+/* 
+    Created on : Mar 17, 2018, 1:58:44 PM
+    Author     : Mihai Rizea
+*/
+.thc{
+    color: darkorange;
+    vertical-align: top;
+    font-weight: bold;
+    background-color: lawngreen;
+}
