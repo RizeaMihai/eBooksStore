@@ -1,5 +1,7 @@
 /*
- Login servlet
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package Servlets;
 
@@ -21,10 +23,10 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- * Login servlet
+ * Mainpage servlet
  * @author Mihai Rizea
  */
-public class Login extends HttpServlet {
+public class Mainpage extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -49,57 +51,7 @@ public class Login extends HttpServlet {
         Connection connection = null;
         Statement statement = null;
         ResultSet resultSet = null;
-        try
-        {
-            Class driverClass = Class.forName(driver);
-            connection = DriverManager.getConnection(url, user, password);
-            statement = connection.createStatement();
-            String query = "SELECT SSN,NAME,PASSWORD,USERS.ROLE from USERS, USER_ROLES WHERE USER_ROLES.ROLE=USERS.ROLE AND USERS.SSN='"+username+"' AND USERS.PASSWORD ='"+pass+"'";
-            // SELECT SSN,NAME,PASSWORD,USERS.ROLE from USERS, USER_ROLES WHERE USER_ROLES.ROLE=USERS.ROLE AND USERS.SSN='mihai' AND USERS.PASSWORD ='rizea'
-            resultSet = statement.executeQuery(query);
-            //boolean resultSetHasRows = resultSet.next(); 
-            if (resultSet.next())
-            {
-                // redirect to main page - user is authentificated
-               response.sendRedirect("mainpage.jsp");
-            }
-            else
-            {
-                // redirect back to index.jsp page
-               response.sendRedirect("index.jsp");
-            }
-        }
-        catch (ClassNotFoundException | SQLException ex)
-        {
-            System.out.println(ex);
-        }
-        finally
-        {
-            if (resultSet != null)
-            {
-                try
-                {
-                    resultSet.close();
-                }
-                catch (Exception ex){System.out.println(ex);}
-            }
-            if (statement != null)
-            {
-                try
-                {
-                    statement.close();
-                }
-                catch (Exception ex){System.out.println(ex);}
-            }	
-            if (connection != null)
-            {
-                try
-                {
-                    connection.close();
-                }
-                catch (Exception ex){System.out.println(ex);}
-            }
-        }	
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -138,7 +90,7 @@ public class Login extends HttpServlet {
      */
     @Override
     public String getServletInfo() {
-        return "Login servlet";
+        return "Short description";
     }// </editor-fold>
 
 }

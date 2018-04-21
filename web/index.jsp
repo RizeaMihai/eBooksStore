@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="web\WEB-INF\css\eBooksStoreCSS.css" type="text/css"/>
+        <link rel="stylesheet" href=".\css\eBooksStoreCSS.css" type="text/css"/>
         <title>Electronic books store</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
