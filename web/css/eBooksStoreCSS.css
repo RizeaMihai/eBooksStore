@@ -270,7 +270,20 @@ select{
    height: 23px;
    }
 .button {
-    background-color: grey;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: darkgray;
+    color: whitesmoke;
+    padding: 3px 3px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 3em;
+}
+.button2 {
+    background-color: rgba(0, 0, 0, 0.5);
     border: darkgray;
     color: whitesmoke;
     padding: 3px 3px;
@@ -285,12 +298,14 @@ select{
 
 .button1 {border-radius: 8px;}
 
-select{
-    font-family: sans-serif;
-    background-color: rgba(0, 0, 0, 0.5);
-    color:white;
+.table input[type=submit] {
+    padding:15px 45px; 
+    background:rgba(0, 0, 0, 0.5);
+    color:#fff;
+    font-size:30px;
+    font-weight:bold; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
 }
-select:hover {
-  background-color: rgba(0, 0, 0, 0.1);
-  color:White;
-}  

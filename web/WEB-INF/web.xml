@@ -8,6 +8,14 @@
         <servlet-name>Mainpage</servlet-name>
         <servlet-class>Servlets.Mainpage</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Logout</servlet-name>
+        <servlet-class>Servlets.Logout</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ManageUsers</servlet-name>
+        <servlet-class>Servlets.ManageUsers</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -15,6 +23,14 @@
     <servlet-mapping>
         <servlet-name>Mainpage</servlet-name>
         <url-pattern>/Mainpage</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Logout</servlet-name>
+        <url-pattern>/Logout</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ManageUsers</servlet-name>
+        <url-pattern>/ManageUsers</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

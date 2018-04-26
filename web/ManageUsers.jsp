@@ -1,9 +1,11 @@
+<%-- 
+    Document   : ManageUsers
+    Created on : Apr 26, 2018, 9:52:36 PM
+    Author     : Mihai Rizea
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
         <title>User management</title>
@@ -69,10 +71,10 @@ and open the template in the editor.
                     </td>
                 </tr>
                 <tr>
-                    <td><input class="ebookstorebutton" type="insert" size="10" value="Insert"/></td>                    
-                    <td><input class="ebookstorebutton" type="update" size="10" value="Update"/></td>                    
-                    <td><input class="ebookstorebutton" type="delete" size="10" value="Delete"/></td>                    
-                    <td><input class="ebookstorebutton" type="cancel" size="10" value="Cancel"/></td>                    
+                    <td><input type="submit" name="insert_newebook" size="10" value="Insert" class="ebookstorebutton"/></td>                    
+                    <td><input type="submit" name="update_ebook" size="10" value="Update" class="ebookstorebutton"/></td>                    
+                    <td><input type="submit" name="delete_ebook" size="10" value="Delete" class="ebookstorebutton"/></td>                    
+                    <td><input type="submit" name="cancel" size="10" value="Cancel" class="ebookstorebutton"/></td>                    
                 </tr>
             </tc>
         </table>

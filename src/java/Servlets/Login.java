@@ -4,21 +4,16 @@
 package Servlets;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.Formatter;
-import java.util.Locale;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import javax.servlet.http.HttpSession;
 
 /**
  * Login servlet
@@ -49,23 +44,33 @@ public class Login extends HttpServlet {
         Connection connection = null;
         Statement statement = null;
         ResultSet resultSet = null;
+        HttpSession session = request.getSession();
+        
         try
         {
             Class driverClass = Class.forName(driver);
             connection = DriverManager.getConnection(url, user, password);
             statement = connection.createStatement();
-            String query = "SELECT SSN,NAME,PASSWORD,USERS.ROLE from USERS, USER_ROLES WHERE USER_ROLES.ROLE=USERS.ROLE AND USERS.SSN='"+username+"' AND USERS.PASSWORD ='"+pass+"'";
+            String query = "SELECT SSN,NAME,PASSWORD,USERS.ROLE from USERS, USER_ROLES WHERE USER_ROLES.ROLE=USERS.ROLE AND USERS.NAME='"+username+"' AND USERS.PASSWORD ='"+pass+"'";
             // SELECT SSN,NAME,PASSWORD,USERS.ROLE from USERS, USER_ROLES WHERE USER_ROLES.ROLE=USERS.ROLE AND USERS.SSN='mihai' AND USERS.PASSWORD ='rizea'
             resultSet = statement.executeQuery(query);
-            //boolean resultSetHasRows = resultSet.next(); 
+            //boolean resultSetHasRows = resultSet.next();
+            boolean logged = false;
+            
             if (resultSet.next())
             {
+                session.setAttribute("username", username);
+                String role = resultSet.getString("ROLE");
+                session.setAttribute("role", role);
                 // redirect to main page - user is authentificated
                response.sendRedirect("mainpage.jsp");
+               logged = true;
+               session.setAttribute("logged", logged);
             }
             else
             {
                 // redirect back to index.jsp page
+                session.setAttribute("logged", false);
                response.sendRedirect("index.jsp");
             }
         }

@@ -7,6 +7,7 @@ Butons css
 */
 
 .btn {
+    background-color: rgba(0, 0, 0, 0.5);
     border: none; /* Remove borders */
     color: white; /* Add a text color */
     padding: 14px 28px; /* Add some padding */
