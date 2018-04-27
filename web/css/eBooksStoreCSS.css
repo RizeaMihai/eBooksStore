@@ -309,3 +309,23 @@ select{
     border-radius: 5px; 
 }
 */
+.tablecenterdwithborder input[type=submit] {
+    padding:5px 20px; 
+    background:rgba(0, 0, 0, 0.5);
+    outline: none;
+    color:#fff;
+    font-size:20px;
+    border: none;
+    cursor:pointer;
+    border-radius: 5px;
+}
+.tablecenterdwithborder2 input[type=submit] {
+    padding:5px 20px; 
+    background:rgba(0, 0, 0, 0.5);
+    outline: none;
+    color:#fff;
+    font-size:20px;
+    border: none;
+    cursor:pointer;
+    border-radius: 5px;
+}

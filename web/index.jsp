@@ -23,7 +23,7 @@
                         Username
                     </td>
                     <td>
-                        <input class ="inputlargeonyellow" type="text" placeholder="Your username" name="username"/>
+                        <input class ="inputlargeonyellow" type="text" name="username"/>
                     </td>
                     
                 </tr>
@@ -32,7 +32,7 @@
                         Password
                     </td>
                     <td>
-                        <input class ="inputlargeonyellowpassword" placeholder="Your password" type="password" name="password"/>
+                        <input class ="inputlargeonyellowpassword" type="password" name="password"/>
                     </td>
                     
                 </tr>
@@ -41,7 +41,7 @@
                         
                     </td>
                     <td>
-                        <input type="submit" value="Login" name="login"/>
+                        <input type="submit" class="ebooksstorebutton" value="Login" name="login"/>
                     </td>
                 </tr>
             </tc>

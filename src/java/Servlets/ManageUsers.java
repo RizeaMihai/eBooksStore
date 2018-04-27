@@ -63,7 +63,7 @@ public class ManageUsers extends HttpServlet {
                 connection = DriverManager.getConnection(url, user, password);
                 statement = connection.createStatement();
                 //call stored procedure to insert a new person
-                String DML = "INSERT INTO USERS VALUES (?, ?, ?, ?, ?)";
+                String DML = "INSERT INTO USERS VALUES (?, ?, ?, ?)";
                 PreparedStatement pstmnt = connection.prepareStatement(DML);
                 pstmnt.setString(1, ssn);
                 pstmnt.setString(2, username);
