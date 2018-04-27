@@ -170,7 +170,6 @@ input[type=text] {
     width: 100px;
     background-color: rgba(0, 0, 0, 0.5);
     font-family: Quicksand;
-    font-weight: bold;
     color: whitesmoke;
 }
 .inputlargeonyellowpassword[type=password] {
@@ -298,14 +297,15 @@ select{
 
 .button1 {border-radius: 8px;}
 
-.table input[type=submit] {
-    padding:15px 45px; 
+/* .table input[type=submit] {
+    padding:10px 40px; 
     background:rgba(0, 0, 0, 0.5);
+    outline: none;
     color:#fff;
-    font-size:30px;
+    font-size:10px;
     font-weight:bold; 
-    border:0 none;
+    border: none;
     cursor:pointer;
-    -webkit-border-radius: 5px;
     border-radius: 5px; 
 }
+*/

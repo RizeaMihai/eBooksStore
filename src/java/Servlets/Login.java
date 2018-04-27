@@ -51,7 +51,7 @@ public class Login extends HttpServlet {
             Class driverClass = Class.forName(driver);
             connection = DriverManager.getConnection(url, user, password);
             statement = connection.createStatement();
-            String query = "SELECT SSN,NAME,PASSWORD,USERS.ROLE from USERS, USER_ROLES WHERE USER_ROLES.ROLE=USERS.ROLE AND USERS.NAME='"+username+"' AND USERS.PASSWORD ='"+pass+"'";
+            String query = "SELECT SSN,USERNAME,PASSWORD,USERS.ROLE from USERS, USER_ROLES WHERE USER_ROLES.ROLE=USERS.ROLE AND USERS.USERNAME='"+username+"' AND USERS.PASSWORD ='"+pass+"'";
             // SELECT SSN,NAME,PASSWORD,USERS.ROLE from USERS, USER_ROLES WHERE USER_ROLES.ROLE=USERS.ROLE AND USERS.SSN='mihai' AND USERS.PASSWORD ='rizea'
             resultSet = statement.executeQuery(query);
             //boolean resultSetHasRows = resultSet.next();

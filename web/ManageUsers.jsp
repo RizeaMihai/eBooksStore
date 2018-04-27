@@ -14,29 +14,44 @@
         <link rel="stylesheet" href="css/style.css" type="text/css">
         <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="css/eBooksStoreCSS.css" type="text/css"/>
-</head>
-<body>
+    </head>
+    <body>
         <div class="menu">
-            <div class="btn"><i class="fa fa-user-circle-o" style="font-size:24px"></i> Manage</div>
-            <div class="btn"><i class="fa fa-shopping-cart" style="font-size:24px"></i> Orders</div>
-            <div class="btn"><i class="fa fa-group" style="font-size:24px"></i> About us</div>
-            <div class="btn"><i class="fa fa-address-book" style="font-size:24px"></i> Contact us</div>
-            <div class="btn"><i class="fa fa-user-secret" style="font-size:24px"></i> Logout</div>
-        </div>
+            <div class="btn"><i class="fa fa-user-circle-o" style="font-size:24px"></i> Manage eBooks</div>
+            <div class="btn"><i class="fa fa-user-circle-o" style="font-size:24px"></i> Manage Users</div>
+            <form action="./Logout">
+                <button class="btn" type="submit"><i class="fa fa-user-secret" style="font-size:24px"></i> Logout</button>
+            </form> 
+        </div>        
+        <form action="./ManageUsers" method="put">
         <table class="tablecenterdwithborder2">
             <tc>
+                <tr>
+                    <td class="tdr">
+                        SSN:
+                    </td>
+                    <td>
+                        <input class ="inputlargeonyellow" type="text" name="inputform_neweuser_SSN"/>
+                    </td>
+                    <td>
+
+                    </td>
+                    <td>
+
+                    </td>
+                </tr>
                 <tr>
                     <td class="tdr">
                         Username:
                     </td>
                     <td>
-                        <input class ="inputlargeonyellow" type="text"/>
+                        <input class ="inputlargeonyellow" type="text" name="inputform_neweuser_username"/>
                     </td>
                     <td>
-                        
+
                     </td>
                     <td>
-                        
+
                     </td>
                 </tr>
                 <tr>
@@ -44,85 +59,60 @@
                         Password:
                     </td>
                     <td>
-                        <input class ="inputlargeonyellowpassword" type="password"/>
+                        <input class ="inputlargeonyellowpassword" type="password" name="inputform_neweuser_password"/>
                     </td>
                     <td>
-                        
+
                     </td>
                     <td>
-                        
+
                     </td>
                 </tr>
                 <tr>
                     <td class="tdr">
-                        User type:
+                        Role:
                     </td>
                     <td>
-                        <select>
-                            <option>Admin</option>
-                            <option>User</option>
-                        </select>                           
+                        <input class ="inputlargeonyellow" type="text" name="inputform_neweuser_role"/>                           
                     </td>
                     <td>
-                        
+
                     </td>
                     <td>
-                        
+
                     </td>
                 </tr>
                 <tr>
-                    <td><input type="submit" name="insert_newebook" size="10" value="Insert" class="ebookstorebutton"/></td>                    
-                    <td><input type="submit" name="update_ebook" size="10" value="Update" class="ebookstorebutton"/></td>                    
-                    <td><input type="submit" name="delete_ebook" size="10" value="Delete" class="ebookstorebutton"/></td>                    
-                    <td><input type="submit" name="cancel" size="10" value="Cancel" class="ebookstorebutton"/></td>                    
+                    <td>
+                        <form action="InsertUser.jsp" method="post">
+                            <input type="submit" name="insert_newebook" size="10" value="Insert" class="ebookstorebutton"/>
+                        </form>
+                    </td>                    
+                    <td>
+                        <form action="UpdateUser.jsp" method="post">
+                            <input type="submit" name="update_ebook" size="10" value="Update" class="ebookstorebutton"/>
+                        </form>    
+                    </td>                    
+                    <td>
+                        <form action="DeleteUser.jsp" method="post">
+                            <input type="submit" name="delete_ebook" size="10" value="Delete" class="ebookstorebutton"/>
+                        </form>    
+                    </td>
+                    <td>
+                        <form action="Cancel.jsp" method="post">
+                            <input type="submit" name="cancel" size="10" value="Cancel" class="ebookstorebutton"/>
+                        </form>    
+                    </td>
                 </tr>
             </tc>
         </table>
-        <table class="tablecenterdwithborder">
-            <tc>
-                <tr>
-                    <td class="tdcbold">
-                        Select
-                    </td>
-                    <td class="tdcbold">
-                        Username
-                    </td>
-                    <td class="tdcbold">
-                        Password
-                    </td>
-                    <td class="tdcbold">
-                        Role<button class="button button1">Admin</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="tdcbold2">
-                        <input type="checkbox" name="first" value="admin">
-                    </td>
-                    <td class="tdcbold2">
-                        admin
-                    </td>
-                    <td class="tdcbold2">
-                        admin
-                    </td>
-                    <td class="tdcbold2">
-                        admin
-                    </td>                    
-                </tr>
-                <tr>
-                    <td class="tdcbold2">
-                        <input type="checkbox" name="first" value="admin">
-                    </td>
-                    <td class="tdcbold2">
-                        mihai
-                    </td>
-                    <td class="tdcbold2">
-                        test
-                    </td>
-                    <td class="tdcbold2">
-                        user
-                    </td>                    
-                </tr>                
-            </tc>
-        </table>
+       </form>
+            <%-- <table class="tablecenterdwithborder">
+                <tr><td>SSN:</td><td><input type="text" name="inputform_neweuser_SSN"></input></td></tr>
+                <tr><td>Username:</td><td><input type="text" name="inputform_neweuser_username"></input></td></tr>
+                <tr><td>Pass:</td><td><input type="text"name="inputform_neweuser_password"></input></td></tr>
+                <tr><td>Role:</td><td><input type="text"name="inputform_neweuser_role"></input></td></tr>
+            </table>
+            --%>
     </body>
 </html>

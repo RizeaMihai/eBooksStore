@@ -20,19 +20,19 @@
             <tc>
                 <tr>
                     <td class="tdc">
-                        Username:
+                        Username
                     </td>
                     <td>
-                        <input class ="inputlargeonyellow" type="text" name="username"/>
+                        <input class ="inputlargeonyellow" type="text" placeholder="Your username" name="username"/>
                     </td>
                     
                 </tr>
                 <tr>
                     <td class="tdc">
-                        Password:
+                        Password
                     </td>
                     <td>
-                        <input class ="inputlargeonyellowpassword" type="password" name="password"/>
+                        <input class ="inputlargeonyellowpassword" placeholder="Your password" type="password" name="password"/>
                     </td>
                     
                 </tr>
@@ -41,7 +41,7 @@
                         
                     </td>
                     <td>
-                        <input class="ebookstorebutton" type="submit" value="Login" name="login"/>
+                        <input type="submit" value="Login" name="login"/>
                     </td>
                 </tr>
             </tc>
